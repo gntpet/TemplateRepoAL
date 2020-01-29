@@ -1,0 +1,4 @@
+*.app
+*.flf
+/.vscode/rad.json
+/.vscode/launch.json

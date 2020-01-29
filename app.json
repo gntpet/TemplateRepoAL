@@ -1,0 +1,18 @@
+{
+  "id": "TODO_set new guid here",
+  "name": "TODO_The unique extension name23",  
+  "brief": "TODO_Short description of the extension.",
+  "description": "TODO_Longer description of the extension.",
+
+  "platform": "14.0.0.0",
+  "application": "13.0.0.0",
+  
+  "publisher": "K3 Business Solutions",  
+  "version": "1.0.0.0",
+  "dependencies": [],
+  "showMyCode": true,
+  "runtime": "3.0",
+  "target": "Extension",
+  "features": ["TranslationFile"],
+  "idRange": {"from": 50000,"to": 99999}
+}

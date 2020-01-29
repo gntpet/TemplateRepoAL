@@ -1,0 +1,17 @@
+name: $(Build.BuildId)
+
+pool: 
+ name: AL
+
+resources:
+  repositories:
+  - repository: scripts
+    type: git
+    name: AL_scripts 
+
+
+variables:
+  - group: AzureVaultForBuilds
+
+steps: 
+  - template: ALOpsCI.yml@scripts
