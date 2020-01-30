@@ -14,5 +14,11 @@
   "runtime": "3.0",
   "target": "Extension",
   "features": ["TranslationFile"],
-  "idRange": {"from": 50000,"to": 99999}
+  "idRange": {"from": 50000,"to": 99999},
+
+  "privacyStatement":  "https://go.microsoft.com/fwlink/?linkid=724009",
+  "EULA":  "https://go.microsoft.com/fwlink/?linkid=2009120",
+  "help":  "https://docs.microsoft.com/en-us/dynamics365/business-central/",
+  "url":  "https://go.microsoft.com/fwlink/?linkid=724011",
+  "logo":  "./logo.png"
 }

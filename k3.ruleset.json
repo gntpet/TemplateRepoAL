@@ -1,0 +1,25 @@
+{
+    "name": "k3 ruleset",
+    "rules": [
+        {                    
+            "id": "AS0055",                    
+            "action": "Hidden",
+            "justification": "Disable rule AS0055. Cannot set target country level yet, but want to use other AppSourceCop rules"
+        }, 
+        {                    
+            "id": "PTE0005",                    
+            "action": "Hidden",
+            "justification": "Disable rule PTE0005. Cannot set Interna/OnPrem, but want to use other PerTenantExtension rules"
+        },
+        {                    
+            "id": "AS0051",                    
+            "action": "Hidden",
+            "justification": "Disable rule AS0051. Disabling logo rule until we receive URL with k3 logo"
+        },
+        {                    
+            "id": "AS0053",                    
+            "action": "None",
+            "justification": "Disable rule AS0053. Cannot set Cloud/Extension, but want to use other AppSourceCop rules"
+        }
+    ]
+}

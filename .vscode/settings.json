@@ -1,5 +1,6 @@
 {
     "al.codeAnalyzers": ["${AppSourceCop}", "${CodeCop}", "${PerTenantExtensionCop}", "${UICop}"],
     "al.enableCodeAnalysis": true,
-    "al.backgroundCodeAnalysis": true
+    "al.backgroundCodeAnalysis": true,
+    "al.ruleSetPath": "./k3.ruleset.json"
 }
