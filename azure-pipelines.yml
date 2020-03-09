@@ -1,17 +1,35 @@
-name: $(Build.BuildId)
-
-pool: 
- name: AL
-
 resources:
   repositories:
   - repository: scripts
     type: git
-    name: AL_scripts 
+    name: AL_scripts  
 
+stages:
+  - stage: BuildAndTest
+    variables:
+      - group: AzureVaultForBuilds
+    jobs:
+    - job: BuildAndTest
+      pool:
+        name: 'AL'
+      steps:
+        - template: ALOpsCI.yml@scripts
 
-variables:
-  - group: AzureVaultForBuilds
-
-steps: 
-  - template: ALOpsCI.yml@scripts
+  - stage: DeployToTesting
+    jobs:
+    - deployment: DeployToTesting
+      pool:
+        name: 'k3lab'
+        demands: 
+          - Agent.Name -equals #ENTER_ENV_NAME
+      environment:
+        name: #ENTER_ENV_NAME  
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - task: ALOpsAppPublish@1
+                displayName: 'ALOps App Publish'
+                inputs:
+                  nav_serverinstance: NAV
+              
