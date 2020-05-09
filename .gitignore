@@ -2,3 +2,4 @@
 *.flf
 /.vscode/rad.json
 /.vscode/launch.json
+/.vscode/.alcache/
