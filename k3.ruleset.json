@@ -20,6 +20,11 @@
             "id": "AS0053",                    
             "action": "None",
             "justification": "Disable rule AS0053. Cannot set Cloud/Extension, but want to use other AppSourceCop rules"
+        },
+        {                    
+            "id": "AS0084",                    
+            "action": "None",
+            "justification": "Disable rule AS0084. We are using our custom range"
         }
     ]
 }
