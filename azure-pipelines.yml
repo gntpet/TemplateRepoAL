@@ -16,6 +16,8 @@ stages:
         - template: ALOpsCI.yml@scripts
 
   - stage: DeployToTesting
+    variables:
+      - group: AzureVaultForBuilds
     jobs:
     - deployment: DeployToTesting
       pool:
@@ -32,4 +34,3 @@ stages:
                 displayName: 'ALOps App Publish'
                 inputs:
                   nav_serverinstance: NAV
-              
