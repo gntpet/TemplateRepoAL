@@ -14,7 +14,9 @@
   "runtime": "3.0",
   "target": "Extension",
   "features": ["TranslationFile"],
-  "idRange": {"from": 50000,"to": 99999},
+  "idRanges": [
+    {"from": TODO,"to": TODO} //https://axk3btg.sharepoint.com/:x:/s/MV/EWKw6mOT_klHtl94apsRVgwByRqd07j8oAvj7gvZVMimzg?e=qZQM0h
+  ],
 
   "privacyStatement":  "https://go.microsoft.com/fwlink/?linkid=724009",
   "EULA":  "https://go.microsoft.com/fwlink/?linkid=2009120",
