@@ -1,36 +1,12 @@
 resources:
   repositories:
-  - repository: scripts
+  - repository: templates
     type: git
     name: AL_scripts  
 
-stages:
-  - stage: BuildAndTest
-    variables:
-      - group: AzureVaultForBuilds
-    jobs:
-    - job: BuildAndTest
-      pool:
-        name: 'AL'
-      steps:
-        - template: ALOpsCI.yml@scripts
-
-  - stage: DeployToTesting
-    variables:
-      - group: AzureVaultForBuilds
-    jobs:
-    - deployment: DeployToTesting
-      pool:
-        name: 'k3lab'
-        demands: 
-          - Agent.Name -equals #ENTER_ENV_NAME
-      environment:
-        name: #ENTER_ENV_NAME  
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-              - task: ALOpsAppPublish@1
-                displayName: 'ALOps App Publish'
-                inputs:
-                  nav_serverinstance: NAV
+extends:
+  template: extension.yml@templates
+  parameters:
+    versions: []  #fill base versions that extension should be compiled against to. for e.g. 'release135', 'release129'
+    environments: [] #fill environments name, where extension should be deployed. for e.g. 'cltesting', 'kwtesting'
+    dependantApps: []  #fill id of pipelines, that this extension denepnds on. for e.g. 253,254
